@@ -1,6 +1,6 @@
-# Project: Survey of prices in different markets.
+# Proyecto: Encuesta de precios en diferentes mercados.
 ## Proyecto: Relevamiento de precios en distintos mercados.
-In this project, an ETL (Extract, transform and Load) process was carried out from a data set, which focused on the same business perspective. The data varies from various sources of price surveys in different markets in Argentina, then the DER was carried out through MySQL Worbench.
+En este proyecto se realizó un proceso ETL (Extract, transform and Load) a partir de un conjunto de datos, el cual se centró en la misma perspectiva de negocio. Los datos varían de diversas fuentes de encuestas de precios en diferentes mercados de Argentina, luego el DER se realizó a través de MySQL Worbench.
 
 The process of the project video in this link
 [![Alt text](https://img.youtube.com/vi/8NuuhUJACbQ/0.jpg)](https://www.youtube.com/watch?v=8NuuhUJACbQ)
@@ -11,26 +11,31 @@ The process of the project video in this link
 
 Then, according to the three stages of the ETL process and the required subtopics, the following is presented:
 
-## STAGE 1: EXTRACTION
-Firstly, the datasets were acquired from the Github site, in xlsx, csv, json, txt and parquet formats, which were taken to the same extension that is csv, since it is more advisable to work with this extension for this type of data. (datasets). For this stage, the Visual Studio development environment was used and Python was used as the programming language.
+## Diagrama de flujo de trabajo ETL.
 
-## STAGE 2: TRANSFORMATION
-This stage used the Python tool and is divided into the following substages:
-### 1) Data visualization
-Here a visualization of the data was made, Python modules such as .head(), sample(), df.isnull().sum() were used to see how the data is formed and then continue with the other audit.
-### 3) Data cleaning
-For null data I decided to remove some columns whenever the majority (>70%) is null, as well as instead of removing rows I decided to use the .fillna(method="bfill") module that fills in the null data, based on to the value of the next row.
-### 4) Outlier Search
-I used sample() to see which values ​​are atypical, that is, different from the majority or that do not happen in real life, I also observed if there were duplicate values ​​in the id of the datasets.
-### 5) Data normalization
-Both in the columns, that is, the headers, some headers such as the id were normalized to product_id, in the case of the rows (records) there were several outliers in several columns and they proceeded to label them correctly, transforming the numeric fields by putting the same amount of digits for all, or by replacing the "." by the "," for the price column for example.
-### 6) Joins of the datasets
-The concat function in Python was used to concatenate the price_weeks tables, since they had the same nomenclature in the columns and the records were similar, we proceeded to join the 5 dimension tables in a single general table to be more optimal in the rest. audits.
+<img src="images/pipeline.png" width="650" height="350" align="right">
 
-## STAGE 3: CHARGING
-Finally, the SQLAlchemy library in Python was used to be able to connect to the database that previously created it in MySQL "preciosdb", from there I loaded the datasets all ok to my database, then the alter tables were made, for assign PRIMARY KEY and FOREIGN KEY that warranted it.
-The generated database is finally shown like this:
+Luego, de acuerdo a las tres etapas del proceso ETL y los subtemas requeridos, se presenta lo siguiente:
 
+## ETAPA 1: EXTRACCIÓN
+En primer lugar se adquirieron los datasets del sitio Github, en formatos xlsx, csv, json, txt y parquet, los cuales fueron llevados a la misma extensión que es csv, ya que es más recomendable trabajar con esta extensión para este tipo de datos. (conjuntos de datos). Para esta etapa se utilizó el entorno de desarrollo Visual Studio y se utilizó Python como lenguaje de programación.
+
+## ETAPA 2: TRANSFORMACIÓN
+Esta etapa utilizó la herramienta Python y se divide en las siguientes subetapas:
+### 1) Visualización de datos
+Aquí se realizó una visualización de los datos, se utilizaron módulos de Python como .head(), sample(), df.isnull().sum() para ver cómo se forman los datos para luego continuar con la otra auditoría.
+### 3) Limpieza de datos
+Para datos nulos decidí eliminar algunas columnas siempre que la mayoría (>70%) sea nula, y en lugar de eliminar filas decidí usar el módulo .fillna(method="bfill") que completa los datos nulos, según al valor de la siguiente fila.
+### 4) Búsqueda de valores atípicos
+Utilicé sample() para ver qué valores son atípicos, es decir diferentes a la mayoría o que no suceden en la vida real, también observé si había valores duplicados en el id de los datasets.
+### 5) Normalización de datos
+Tanto en las columnas, es decir los encabezados, algunos encabezados como el id se normalizaron a product_id, en el caso de las filas (registros) había varios valores atípicos en varias columnas y se procedió a etiquetarlos correctamente, transformando los campos numéricos. poniendo la misma cantidad de dígitos para todos, o reemplazando el "." por "," para la columna de precio, por ejemplo.
+### 6) Uniones de los conjuntos de datos
+Se utilizó la función concat en Python para concatenar las tablas precio_semanas, como tenían la misma nomenclatura en las columnas y los registros eran similares, se procedió a unir las tablas de 5 dimensiones en una sola tabla general para ser más óptimo en el resto. auditorías.
+
+## ETAPA 3: CARGA
+Finalmente se utilizó la librería SQLAlchemy en Python para poder conectarme a la base de datos que previamente la creó en MySQL "preciosdb", de allí cargué los datasets todo ok a mi base de datos, luego se hicieron las tablas de alter, para asignar PRIMARY KEY y LLAVE EXTRANJERA que lo ameritaba.
+La base de datos generada finalmente se muestra así:
 <img src="images/DER.JPG" width="700" height="350" align="center">
 
 ### query
