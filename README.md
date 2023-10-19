@@ -1,5 +1,5 @@
 # Proyecto: Encuesta de precios en diferentes mercados.
-## Proyecto: Relevamiento de precios en distintos mercados.
+
 En este proyecto se realizó un proceso ETL (Extract, transform and Load) a partir de un conjunto de datos, el cual se centró en la misma perspectiva de negocio. Los datos varían de diversas fuentes de encuestas de precios en diferentes mercados de Argentina, luego el DER se realizó a través de MySQL Worbench.
 
 The process of the project video in this link
