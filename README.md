@@ -1,6 +1,6 @@
 # Henry Labs 1 - Data Engineer 
 
-En este proyecto se realizó un proceso ETL (Extract, transform and Load) a partir de un conjunto de datos, el cual se centró en la misma perspectiva de negocio. Los datos varían de diversas fuentes de encuestas de precios en diferentes mercados de Argentina, luego el DER se realizó a través de MySQL Worbench.
+Proyecto individual, se realizó todo proceso ETL en 3 días a partir de un conjunto de datos, el cual se centró en la misma perspectiva de negocio. Los datos varían de diversas fuentes de encuestas de precios del año 2020 en diferentes mercados de Argentina.
 
 The process of the project video in this link
 [![Alt text](https://img.youtube.com/vi/8NuuhUJACbQ/0.jpg)](https://www.youtube.com/watch?v=8NuuhUJACbQ)
@@ -8,8 +8,6 @@ The process of the project video in this link
 ## ETL Workflow Diagram.
 
 <img src="images/pipeline.png" width="650" height="350" align="right">
-
-Then, according to the three stages of the ETL process and the required subtopics, the following is presented:
 
 ## Diagrama de flujo de trabajo ETL.
 
