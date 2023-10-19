@@ -8,7 +8,7 @@ app = FastAPI()
 @app.get('/')
 def raiz():
     return RedirectResponse(url="/docs/")
-
+#query 1: Promedio de precio para sucursal_id '2-1-014': 161.3724761904762
 @app.get("/promedio_precio/")
 async def promedio_precio(sucursal_id:str):
     df = pd.read_csv('app/Datasets/df.csv')
