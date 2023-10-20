@@ -45,24 +45,13 @@ services:
       - ./app:/code/app
     command: uvicorn app.main:app --host 0.0.0.0 --port 80
 ```
-- - Instalación: En el archivo dockerfile
+- En el archivo dockerfile
 ```rb
-# 
 FROM python:3.9
-
-# 
 WORKDIR /code
-
-# 
 COPY ./requirements.txt /code/requirements.txt
-
-# 
 RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
-
-# 
 COPY ./app /code/app
-
-# 
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80"]
 ```
 - - Instalación: En el archivo requirements.txt
@@ -82,3 +71,23 @@ docker-compose up -d
 Una vez ejecutado el comando anterior, nos podemos dirigir a la API que se encuentra corriendo en nuestro localhost en el siguiente link http://localhost/docs.
 <img src="images/API.png" width="650" height="350" align="right">
 
+- POR OTRO LADO, si no se utliza un docker-compose, para crear la imagen:
+```rb
+docker build -t myimage .
+```
+- para crear el contenedor:
+```rb
+docker run -d --name mycontainer -P 80:80 myimage
+```
+- para ver si esta corriendo el contenedor:
+```rb
+docker ps
+```
+- para ver si se creó la imagen:
+```rb
+docker image ls
+```
+- en caso de los contenedores tanto en modo up y exited:
+```rb
+docker ps -a
+```
