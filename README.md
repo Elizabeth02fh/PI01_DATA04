@@ -29,5 +29,56 @@ Finally, a query was made to verify if the database works: Average price of the 
 <img src="images/answer.JPG" width="900" height="180" align="left">
 
 #Instalación de containers:
-1. Deploy de container en FastAPI en docker --> 
+1. Deploy de container en FastAPI en docker -->
+[LINK](https://fastapi.tiangolo.com/deployment/docker/)
+- Instalación: En el archivo docker-compose.yml
+```rb
+version: '3'
+services:
+  my_app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    volumes:
+      - ./app:/code/app
+    command: uvicorn app.main:app --host 0.0.0.0 --port 80
+```
+- - Instalación: En el archivo dockerfile
+```rb
+# 
+FROM python:3.9
+
+# 
+WORKDIR /code
+
+# 
+COPY ./requirements.txt /code/requirements.txt
+
+# 
+RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
+
+# 
+COPY ./app /code/app
+
+# 
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80"]
+```
+- - Instalación: En el archivo requirements.txt
+```rb
+fastapi>=0.68.0,<0.69.0
+pydantic>=1.8.0,<2.0.0
+uvicorn>=0.15.0,<0.16.0
+pandas
+numpy
+```
+Luego de tener el dataframe limpios y bonitos, se debe instalar docker, y FastApi recomendable instalar docker desktop.
+
+En powershell de visual studio, nos ubicamos en nuestra carpeta donde estan los archivos de este repositorio para ejecutar el docker-compose que va a levantar la imagen, el contenedor, el puerto de salida y el volumen en nuestro localhost:
+```rb
+docker-compose up -d
+```
+Una vez ejecutado el comando anterior, nos podemos dirigir a la API que se encuentra corriendo en nuestro localhost en el siguiente link http://localhost/docs.
+<img src="images/API.png" width="650" height="350" align="right">
 
