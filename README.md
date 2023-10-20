@@ -22,11 +22,11 @@ En el siguiente link van a poder encontrar los archivos con los que van a trabaj
 <img src="images/pipeline.png" width="650" height="350" align="center">
 
 ## La base de datos generada finalmente se muestra así:
-<img src="images/DER.JPG" width="500" height="200" align="center">
+<img src="images/DER.JPG" width="550" height="250" align="center">
 
 ### query
 Finally, a query was made to verify if the database works: Average price of the 9-1-688 branch, which resulted in:203.64690382081687.
-<img src="images/answer.JPG" width="900" height="180" align="left">
+<img src="images/answer.JPG" width="500" height="100" align="left">
 
 #Instalación de containers:
 1. Deploy de container en FastAPI en docker -->
