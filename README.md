@@ -19,7 +19,7 @@ En el siguiente link van a poder encontrar los archivos con los que van a trabaj
 [LINK](https://www.youtube.com/watch?v=8NuuhUJACbQ)
 
 ## Diagrama de flujo de trabajo ETL.
-<img src="images/pipeline.png" width="650" height="350" align="right">
+![]<img src="images/pipeline.png" width="650" height="350" align="right">
 
 ## La base de datos generada finalmente se muestra así:
 <img src="images/DER.JPG" width="700" height="350" align="center">
