@@ -22,10 +22,10 @@ En el siguiente link van a poder encontrar los archivos con los que van a trabaj
 <img src="images/pipeline.png" width="650" height="350" align="center">
 
 ## La base de datos generada finalmente se muestra así:
-<img src="images/DER.JPG" width="550" height="250" align="center">
+<img src="images/DER.JPG" width="800" height="200" align="center">
 
 ### query
-Finally, a query was made to verify if the database works: Average price of the 9-1-688 branch, which resulted in:203.64690382081687.
+Finalmente se realizó una consulta para verificar si funciona la base de datos: Precio promedio de la sucursal 9-1-688, lo que resultó en: 203.64690382081687.
 <img src="images/answer.JPG" width="550" height="190" align="left">
 
 ### Instalación de containers:
