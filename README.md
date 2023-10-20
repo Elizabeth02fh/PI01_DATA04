@@ -54,7 +54,7 @@ RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 COPY ./app /code/app
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80"]
 ```
-- - Instalación: En el archivo requirements.txt
+- Instalación: En el archivo requirements.txt
 ```rb
 fastapi>=0.68.0,<0.69.0
 pydantic>=1.8.0,<2.0.0
