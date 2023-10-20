@@ -26,10 +26,10 @@ En el siguiente link van a poder encontrar los archivos con los que van a trabaj
 
 ### query
 Finally, a query was made to verify if the database works: Average price of the 9-1-688 branch, which resulted in:203.64690382081687.
-<img src="images/answer.JPG" width="500" height="100" align="left">
+<img src="images/answer.JPG" width="550" height="170" align="left">
 
-#Instalación de containers:
-1. Deploy de container en FastAPI en docker -->
+### Instalación de containers:
+### 1. Deploy de container en FastAPI en docker -->
 [LINK](https://fastapi.tiangolo.com/deployment/docker/)
 - Instalación: En el archivo docker-compose.yml
 ```rb
