@@ -26,7 +26,7 @@ En el siguiente link van a poder encontrar los archivos con los que van a trabaj
 
 ### query
 Finalmente se realizó una consulta para verificar si funciona la base de datos: Precio promedio de la sucursal 9-1-688, lo que resultó en: 203.64690382081687.
-<img src="images/answer.JPG" width="700" height="290" align="left">
+<img src="images/answer.JPG" width="700" height="200" align="left">
 
 ### Instalación de containers:
 ### 1. Deploy de container en FastAPI en docker -->
